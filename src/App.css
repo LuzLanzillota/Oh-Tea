@@ -1,0 +1,21 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-align: center;
+  
+}
+
+.cart {
+margin-left: -10px;
+}
+
+.cart-text {
+  position: absolute;
+  top: 5.5%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+
+}
