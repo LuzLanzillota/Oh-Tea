@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import cartContext from "../context/cartContext";
+import cartContext from "../context/cartContext";
+
 
 function CartWidget() {
-    // const { countItemsInCart } = useContext(cartContext);
-    // const itemCount = countItemsInCart();
+    const { countItemsInCart } = useContext(cartContext);
+    const itemCount = countItemsInCart();
 
-    // if (itemCount === 0) return null;
 
     return (
         <div className="cart">
@@ -14,11 +14,9 @@ function CartWidget() {
                 <img src="/images/carro-de-la-compra.png" alt="Imagen de carrito" style={{ cursor: "pointer", height: "30px" }} />
             </Link>
 
-            <span className="cart-text">{0}</span>
+            <span className="cart-text">{itemCount}</span>
         </div>
     );
 }
 
 export default CartWidget;
-
-// {itemCount}

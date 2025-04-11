@@ -1,0 +1,27 @@
+footer {
+    border-top: 4px solid black;
+    padding: 20px;
+    margin-top: -3.7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    font-family: Jost;
+    font-weight: 500;
+}
+
+.logo-footer img {
+    width: 80px;
+    margin-left: -15px;
+}
+
+.redes-footer {
+    display: flex;
+}
+
+.redes-footer img {
+    width: 25px;
+    margin: 5px;
+}

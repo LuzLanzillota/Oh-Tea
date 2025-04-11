@@ -1,0 +1,110 @@
+/* Contenedor principal que ocupa toda la pantalla */
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Imagen del producto */
+.product-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+h3 {
+    color: black;
+}
+
+/* Información del producto */
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+/* Título del producto */
+.product-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Precio del producto */
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #C09AB7;
+    margin: 0;
+}
+
+/* Descripción del producto */
+.product-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Contador */
+.product-count {
+    margin-top: auto;
+}
+
+/* Botones del contador */
+.product-count button {
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.product-count button:hover {
+    background: #AC88A3;
+    border: none;
+    color: #fff;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+}
+
+.product-description ul {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.1rem;
+}
+
+.product-description ul li {
+    margin-bottom: 0.25rem;
+    list-style: none;
+
+}
+
+.product-description p {
+    margin-bottom: 1rem;
+}
+.font-bold{
+    font-weight: bold;
+}

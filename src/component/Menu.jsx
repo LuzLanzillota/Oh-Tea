@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Menu.css";
+import Footer from "./Footer";
 
 const categories = [
     {
@@ -157,6 +159,112 @@ const categories = [
             },
         ],
     },
+    {
+        title: "COFFEE TEAM (By Lavazza)",
+        products: [
+            {
+                id: 22,
+                title: "Pistacho Coffee",
+                description: "Un café con leche y dulce de pistacho es una mezcla deliciosa de café suave y cremosa leche, realzada con el sabor único y ligeramente dulce del pistacho.",
+                image: "/images/menu/22.png",
+            },
+            {
+                id: 23,
+                title: "Mango Coffee",
+                description: "Una fusión atrevida de mango, leche y café, que combina lo tropical con lo clásico para una experiencia de sabor única.",
+                image: "/images/menu/23.png",
+            },
+            {
+                id: 24,
+                title: "Cafe Latte/Americano",
+                description: "Es un café simple sin azúcar.",
+                image: "/images/menu/24.png",
+            },
+            {
+                id: 25,
+                title: "Black Sugar Coffee",
+                description: "La riqueza del azúcar negra se une al café y la leche, ofreciendo una versión moderna y deliciosa de un café clásico.",
+                image: "/images/menu/25.png",
+            },
+            {
+                id: 26,
+                title: "Espresso",
+                description: "Es un shot de café puro.",
+                image: "/images/menu/26.png",
+            },
+        ],
+    },
+    {
+        title: "PASTELERÍA",
+        products: [
+            {
+                id: 27,
+                title: "Roll de Chocolate",
+                description: "Dulce pancito enrrollado horneado y relleno de chocolate.",
+                image: "/images/menu/27.png",
+            },
+            {
+                id: 28,
+                title: "Muffin DDL",
+                description: "Muffin de vainilla con chips de chocolate y relleno de dulce de leche.",
+                image: "/images/menu/28.png",
+            },
+            {
+                id: 29,
+                title: "Muffin Vegano",
+                description: "Muffin vegano con relleno de manzana cubierto de nueces.",
+                image: "/images/menu/29.png",
+            },
+            {
+                id: 30,
+                title: "Cookie Chip relleno de DDL",
+                description: "Galleta rellena de dulce de leche con chips de chocolate.",
+                image: "/images/menu/30.png",
+            },
+            {
+                id: 31,
+                title: "Roll de Pasas y Nuez",
+                description: "Dulce pancito enrrollado relleno de pasas cubierto de nueces.",
+                image: "/images/menu/31.png",
+            },
+            {
+                id: 32,
+                title: "PoundCake Marmolado",
+                description: "Dulce y tentador postre que combina lo mejor de dos mundos: el rico sabor a chocolate y la suavidad de la vainilla en cada mordisco.",
+                image: "/images/menu/32.png",
+            },
+            {
+                id: 33,
+                title: "Croissant J&Q",
+                description: "Es un Croissant con jamon y queso, se lo sirve caliente y tostado para una mejor experiencia en su sabor.",
+                image: "/images/menu/33.png",
+            },
+            {
+                id: 34,
+                title: "Twist de Limon",
+                description: "Esponjoso pan de limon con semillas",
+                image: "/images/menu/34.png",
+            },
+            {
+                id: 35,
+                title: "Scone de Queso",
+                description: "Panecillos de manteca y queso.",
+                image: "/images/menu/35.png",
+            },
+            {
+                id: 36,
+                title: "Croque Monsieur",
+                description: "Gran tostado de jamon y queso cubierto de queso derretido.",
+                image: "/images/menu/36.png",
+            },
+            {
+                id: 37,
+                title: "PoundCake Limon y Arandanos",
+                description: "Un budín de limón relleno de arándanos es una deliciosa combinación de sabores frescos y cítricos. El suave y húmedo budín de limón se complementa perfectamente con los arándanos jugosos y llenos de sabor, creando una experiencia dulce y refrescante en cada bocado. Es un postre encantador que deleitará a cualquier amante de los cítricos y los frutos rojos.",
+                image: "/images/menu/37.png",
+            },
+        ],
+    },
 ];
 
 const Menu = () => {
@@ -174,287 +282,37 @@ const Menu = () => {
     };
 
     return (
-        <div className="menu-container">
-            {categories.map((category, index) => (
-                <div key={index} className="category">
-                    <h2>{category.title}</h2>
-                    <div className="products">
-                        {category.products.map((product) => (
-                            <div key={product.id} className="item" onClick={() => openModal(product)}>
-                                <img src={product.image} alt={product.title} width="100" />
-                                <p>{product.title}</p>
-                                <button>Ver más</button>
-                            </div>
-                        ))}
+        <div>
+            <div className="menu-container">
+                {categories.map((category, index) => (
+                    <div key={index} className="category">
+                        <h2>{category.title}</h2>
+                        <div className="products">
+                            {category.products.map((product) => (
+                                <div key={product.id} className="item" onClick={() => openModal(product)}>
+                                    <img src={product.image} alt={product.title} width="100" />
+                                    <p>{product.title}</p>
+                                    <button>Ver más</button>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
 
-            {/* Modal */}
-            {modalOpen && (
-                <div className="modal-overlay" onClick={closeModal}>
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-btn" onClick={closeModal}>X</button>
-                        <img src={modalContent.image} alt={modalContent.title} className="modal-img" />
-                        <h2>{modalContent.title}</h2>
-                        <p>{modalContent.description}</p>
+                {modalOpen && (
+                    <div className="modal-overlay" onClick={closeModal}>
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            <button className="close-btn" onClick={closeModal}>X</button>
+                            <img src={modalContent.image} alt={modalContent.title} className="modal-img" />
+                            <h2>{modalContent.title}</h2>
+                            <p>{modalContent.description}</p>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
+            <Footer />
         </div>
     );
 };
 
 export default Menu;
-
-// function Menu() {
-//     return (
-//         // <div className="detail-container">
-//         //     <h1>BUBBLE TEAM </h1>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\1.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Bubble Pistacho</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\2.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>BubbleTea</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\3.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Bubble Jazmin</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\4.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Bubble Super Caramel</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\5.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Bubble Chocolate</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\6.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Bubble Black Sugar Tea/Milk</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-
-
-//         //     <h2>FRUITY TEAM</h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\7.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Lychee green tea</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\8.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Peach Lemon Tea</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\9.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>MultiBerry</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\10.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Fresh Lemon</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\11.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Lemon Berry Boom 2.0</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\12.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Coco Mango Boom</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         //     <h2>LATTE TEAM </h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\13.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Matcha Latte</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\14.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Frutilla latte</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\15.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Taro latte</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         //     <h2>SHAKE SHAKE TEAM</h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\16.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Oreo Shake</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\17.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Choco Berry Shake</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         //     <h2>PURO TEAM</h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\18.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Ceylon Tea</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\19.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Jazmin Green Tea</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         //     <h2>SODA TEAM</h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\20.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Lychee soda</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\21.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Mango soda</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         //     <h2>COFFEE TEAM (By Lavazza)</h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\22.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Pistacho Coffee</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\23.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Mango Coffee</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\24.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Cafe Latte/Americano</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\25.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Black Sugar Coffee</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\26.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Espresso</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         //     <h2>PASTELERÍA</h2>
-//         //     <div className="container">
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\27.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Roll de Chocolate</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\28.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Muffin DDL</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\29.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Muffin Vegano</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\30.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Cookie Chip relleno de DDL</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\31.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Roll de Pasas y Nuez</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\32.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>PoundCake Marmolado</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\33.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Croissant J&Q</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\34.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Twist de Limon</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\35.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Scone de Queso</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\36.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>Croque Monsieur</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //         <div className="item" onClick={() => openModal("Bubble Pistacho", "Esta bebida combina té de jazmín, leche cremosa, dulce de pistacho y perlas de tapioca, ofreciendo una experiencia refrescante y deliciosamente única.", "bubble_pistacho.jpg")}>
-//         //             <img src=".\images\menu\37.png" alt="Bubble Pistacho" width="100" />
-//         //             <p>PoundCake Limon y Arandanos</p>
-//         //             <button>Ver más</button>
-//         //         </div>
-//         //     </div>
-//         // </div>
-//         <div></div>
-//     );
-// }
-
-
