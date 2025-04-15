@@ -3,7 +3,7 @@ const products = [
         id: 1,
         title: 'Vasos Termico Oh!Violet',
         price: 32000,
-        img: '../public/images/products/1.png',
+        img: '/images/products/1.png',
         description: [
             "El Vaso Térmico Oh!Violet es la opción ideal para mantener tus bebidas a la temperatura perfecta durante todo el día.Fabricado en acero inoxidable 304, garantiza durabilidad y conservación térmica, manteniendo tus bebidas frías o calientes hasta por 10 horas.Con su elegante diseño y capacidad de 700 ml, es perfecto para acompañarte a donde vayas.",
             "Características:",
@@ -17,7 +17,7 @@ const products = [
         id: 2,
         title: 'Oh!Bubble Cup',
         price: 17000,
-        img: '../public/images/products/2.png',
+        img: '/images/products/2.png',
         description: [
             "El Vaso Oh!Bubble Cup es la opción ideal para tomar tus bebidas durante el día o guardado en la mochila. Con su elegante diseño, capacidad de 500 ml y su cierre hermético, es perfecto para acompañarte a donde vayas sin miedo a derrame.",
             "Características:",
@@ -33,7 +33,7 @@ const products = [
         id: 3,
         title: 'Vasos Termico Oh!Black',
         price: 32000,
-        img: '../public/images/products/3.png',
+        img: '/images/products/3.png',
         description: [
             "El Vaso Térmico Oh!Violet es la opción ideal para mantener tus bebidas a la temperatura perfecta durante todo el día.Fabricado en acero inoxidable 304, garantiza durabilidad y conservación térmica, manteniendo tus bebidas frías o calientes hasta por 10 horas.Con su elegante diseño y capacidad de 700 ml, es perfecto para acompañarte a donde vayas.",
             "Características:",
@@ -47,7 +47,7 @@ const products = [
         id: 4,
         title: 'Vasos Termico Oh!Pink',
         price: 32000,
-        img: '../public/images/products/4.png',
+        img: '/images/products/4.png',
         description: [
             "El Vaso Térmico Oh!Violet es la opción ideal para mantener tus bebidas a la temperatura perfecta durante todo el día.Fabricado en acero inoxidable 304, garantiza durabilidad y conservación térmica, manteniendo tus bebidas frías o calientes hasta por 10 horas.Con su elegante diseño y capacidad de 700 ml, es perfecto para acompañarte a donde vayas.",
             "Características:",
@@ -61,7 +61,7 @@ const products = [
         id: 5,
         title: 'Vaso Termico Oh!White',
         price: 32000,
-        img: '../public/images/products/5.png',
+        img: '/images/products/5.png',
         description: [
             "El Vaso Térmico Oh!Violet es la opción ideal para mantener tus bebidas a la temperatura perfecta durante todo el día.Fabricado en acero inoxidable 304, garantiza durabilidad y conservación térmica, manteniendo tus bebidas frías o calientes hasta por 10 horas.Con su elegante diseño y capacidad de 700 ml, es perfecto para acompañarte a donde vayas.",
             "Características:",
@@ -75,7 +75,7 @@ const products = [
         id: 6,
         title: 'Té en Hebras – Uva Oolong',
         price: 12000,
-        img: '../public/images/products/6.png',
+        img: '/images/products/6.png',
         description: [
             "El Premium Oolong con Aroma de Uva te ofrece una experiencia refinada, combinando el sabor suave y complejo del té oolong premium con el dulce y fragante aroma de uvas frescas. Esta mezcla exquisita aporta una sensación de lujo a cada taza, con un toque delicado y afrutado que realza el carácter natural del oolong.",
             "Beneficios:",
@@ -90,7 +90,7 @@ const products = [
         id: 7,
         title: 'Té en Hebras – Premium Oolong',
         price: 12000,
-        img: '../public/images/products/7.png',
+        img: '/images/products/7.png',
         description: [
             "Experimenta la riqueza del Premium Oolong Tostado, un té cuidadosamente seleccionado y tostado para resaltar sus notas profundas y complejas. Su sabor cálido y ligeramente ahumado, con toques de nuez y caramelo, crea una infusión robusta y equilibrada que deleita el paladar. Este té oolong de alta calidad es ideal para quienes buscan una experiencia más intensa y sofisticada.",
             "Beneficios:",
@@ -105,7 +105,7 @@ const products = [
         id: 8,
         title: 'Té en hebras – Peach Oolong',
         price: 12000,
-        img: '../public/images/products/8.png',
+        img: '/images/products/8.png',
         description: [
             "Disfruta de una infusión única que combina la suavidad floral del té oolong con el toque dulce y afrutado de auténticos pedazos de durazno desecado. El Peach Oolong ofrece una experiencia de sabor delicada y refrescante, ideal para cualquier momento del día. Su equilibrado perfil aromático y propiedades antioxidantes lo convierten en una opción perfecta tanto para los amantes del té como para quienes buscan algo nuevo y delicioso.",
             "Beneficios:",
@@ -120,7 +120,7 @@ const products = [
         id: 9,
         title: 'Té en Hebras – Lychee Oolong',
         price: 12000,
-        img: '../public/images/products/9.png',
+        img: '/images/products/9.png',
         description: [
             "Disfruta de una experiencia de té excepcional con el Premium Oolong con Aroma de Lychee, que combina la calidad superior del té oolong con el exótico y dulce aroma de lychee. Esta mezcla cuidadosamente elaborada ofrece un sabor equilibrado, suave y ligeramente afrutado, ideal para aquellos que buscan algo diferente y refrescante en su rutina de té.",
             "Beneficios:",
@@ -135,7 +135,7 @@ const products = [
         id: 10,
         title: 'Vaso Oh!Black 500ml',
         price: 3000,
-        img: '../public/images/products/10.png',
+        img: '/images/products/10.png',
         description: [
             "Tu compañero perfecto para disfrutar de bebidas calientes en cualquier lugar. El Vaso Oh!Black está diseñado para ser reutilizable y acompañarte siempre que lo necesites, ayudándote a reducir el uso de plásticos desechables. Con un diseño elegante y práctico, es ideal para llevar tus infusiones, cafés o tés favoritos dondequiera que vayas.",
             "Incluye:",
@@ -148,7 +148,7 @@ const products = [
         id: 11,
         title: 'Kit Sorbetes Reutilizables',
         price: 5000,
-        img: '../public/images/products/11.png',
+        img: '/images/products/11.png',
         description: [
             "De un Metal Inoxidable son el compañero perfecto para tus visitas y el disfrute de cada Oh!Tea. Traen: – Sorbete Grande. – Sorbete Fino. – Cepillo de Limpieza. – Bolsa de Tela para Transporte."
         ]

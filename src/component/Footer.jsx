@@ -6,7 +6,7 @@ function Footer() {
         <footer>
             <div className="logo-footer">
                 <Link to="/">
-                    <img src="./images/redes-sociales-footer/logosoloOhTea 2.png" alt="logo de Oh!Tea" />
+                    <img src="/images/redes-sociales-footer/logosoloOhTea 2.png" alt="logo de Oh!Tea" />
                 </Link>
             </div>
             <p>ⒸOh!Tea. Todos los derechos reservados <br /> 2025</p>

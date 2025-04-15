@@ -7,7 +7,7 @@ function NavBar(props) {
         <header>
             <div>
                 <Link to="/">
-                    <img src="\public\images\OhTea.png" alt="Logotipo de Oh!Tea" />
+                    <img src="\images\OhTea.png" alt="Logotipo de Oh!Tea" />
                 </Link>
             </div>
             <nav className="navbar">

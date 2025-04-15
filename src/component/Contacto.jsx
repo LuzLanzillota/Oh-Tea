@@ -23,8 +23,8 @@ function Contacto() {
     return (
         <div>
             <h1>Nuestras sucursales</h1>
-            <div className="card">
-                <img src="./images/Nuestras sucursales/sucursales.png" alt="sucursales" />
+            <div className="locales">
+                <img src="\images\locales.jpg" alt="sucursales" />
             </div>
 
             <div className="form-section">

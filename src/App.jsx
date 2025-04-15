@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './component/NavBar';
 import Innovacion from './component/innovacion';
-import SobreNosotros from './component/SobreNosotros';
+import SobreNosotros from './component/sobreNosotros';
 import Contacto from './component/Contacto';
 import Menu from './component/Menu';
 import { CartContextProvider } from "./context/cartContext";

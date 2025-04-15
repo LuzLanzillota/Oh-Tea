@@ -6,7 +6,7 @@ import Footer from "./Footer";
 function Innovacion() {
     return (
         <div className="innovacion">
-            <img src="./images/Inovacion-en-te.png" alt="Imagen principal de inicio" />
+            <img src="/images/Inovacion-en-te.png" alt="Imagen principal de inicio" />
 
             <div className="btn-container">
                 <Link to="/sobreOhTea">
@@ -25,18 +25,18 @@ function Innovacion() {
                 </div>
             </div>
             <div className="banner-te">
-                <img src="../images/bebidas-del-dia/2.png" alt="banner de tés" />
+                <img src="/images/bebidas-del-dia/2.png" alt="banner de tés" />
             </div>
             <div className="fotitos">
-                <img src="./images/bebidas-del-dia/3.png" alt="fotos de bebidas" />
+                <img src="/images/bebidas-del-dia/3.png" alt="fotos de bebidas" />
                 <p>Seguinos en nuestras redes!</p>
                 <div className="redes">
-                    <div><a href="https://www.tiktok.com/@ohtea_argentina" target="_blank"><img src="./public/images/bebidas-del-dia/tik-tok.png" alt="imagen de tiktok" /></a></div>
-                    <div><a href="https://www.instagram.com/ohtea_argentina/?hl=es" target="_blank"><img src="./public/images/bebidas-del-dia/instagram.png" alt="imagen de instagram" /></a></div>
-                    <div><a href="https://www.facebook.com/ohteaargentina" target="_blank"><img src="./public/images/bebidas-del-dia/facebook.png" alt="imagen de facebook" /></a></div>
+                    <div><a href="https://www.tiktok.com/@ohtea_argentina" target="_blank"><img src="/images/bebidas-del-dia/tik-tok.png" alt="imagen de tiktok" /></a></div>
+                    <div><a href="https://www.instagram.com/ohtea_argentina/?hl=es" target="_blank"><img src="/images/bebidas-del-dia/instagram.png" alt="imagen de instagram" /></a></div>
+                    <div><a href="https://www.facebook.com/ohteaargentina" target="_blank"><img src="/images/bebidas-del-dia/facebook.png" alt="imagen de facebook" /></a></div>
                 </div>
                 <div className="sucursales">
-                    <img src=".\images\bebidas-del-dia\sucursal.png" alt="imagen de nuevas sucursales" />
+                    <img src="\images\bebidas-del-dia\sucursal.png" alt="imagen de nuevas sucursales" />
                     <div className="ver-sucursales">
                         <Link to="/contacto">
                             <Button>Ver Sucursales</Button>
@@ -44,7 +44,7 @@ function Innovacion() {
                     </div>
                 </div>
                 <div className="forma-parte">
-                    <img src=".\images\forma-parte.png" alt="" />
+                    <img src="\images\forma-parte.png" alt="" />
                     <div className="dejar-cv">
                         <Link to="/contacto"> <Button>Dejarnos tu CV</Button></Link>
 
