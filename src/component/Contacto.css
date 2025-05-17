@@ -16,7 +16,7 @@ h2 {
 }
 
 .locales img {
-    width: 80%;
+    width: 90%;
 }
 
 .form-section {
@@ -53,7 +53,7 @@ h2 {
 .contact-form {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .contact-form label {
@@ -78,7 +78,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn-enviar { 
+.btn-enviar {
     cursor: pointer;
     margin-top: 15px;
     width: 100px;
@@ -92,4 +92,98 @@ h2 {
 .form-section button {
     width: 100px;
     margin: auto;
+}
+
+/* Pantallas muy grandes (1600px en adelante) */
+@media screen and (min-width: 1600px) {
+
+    h1,
+    h2 {
+        font-size: 100px;
+    }
+
+    .text-container p {
+        font-size: 25px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .btn-enviar {
+        font-size: 16px;
+    }
+}
+
+/* Pantallas grandes (1300px a 1599px) */
+@media screen and (min-width: 1300px) and (max-width: 1599px) {
+
+    h1,
+    h2 {
+        font-size: 70px;
+    }
+
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .btn-enviar {
+        font-size: 15px;
+    }
+}
+
+/* Pantallas medianas (1024px a 1299px) */
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+    h1,
+    h2 {
+        font-size: 60px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .btn-enviar {
+        font-size: 14px;
+    }
+}
+
+
+/* Pantallas chicas (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .form-section {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .text-container,
+    .form-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    h1,
+    h2 {
+        font-size: 40px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px;
+    }
 }

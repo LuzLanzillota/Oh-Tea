@@ -1,35 +1,40 @@
-import products from "../data/data";
+import getAsyncData, { getAsyncItemsByCategory } from "../data/database";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-
-function ItemListContainer() {
-    const [filteredProducts, setFilteredProducts] = useState([]);
+import Loader from "./Loader";
+import "./ItemListContainer.css";
+function ItemListContainer(props) {
+    const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const { catid } = useParams();
 
     useEffect(() => {
         setLoading(true);
-
-        setTimeout(() => {
-            if (catid) {
-                const filtered = products.filter(
-                    (product) => product.category === catid
-                );
-                setFilteredProducts(filtered);
-            } else {
-                setFilteredProducts(products);
-            }
-            setLoading(false);
-        }, 1000);
+        if (!catid) {
+            getAsyncData()
+                .then((respuesta) => setProducts(respuesta))
+                .catch((error) => alert(error))
+                .finally(() => setLoading(false));
+        } else {
+            getAsyncItemsByCategory(catid)
+                .then((respuesta) => setProducts(respuesta))
+                .catch((error) => alert(error))
+                .finally(() => setLoading(false));
+        }
     }, [catid]);
 
+    if (loading) {
+        return <Loader />;
+    }
 
     return (
-        <div>
-            <ItemList products={filteredProducts} />
+        <div className="itemlist">
+
+            <ItemList products={products} />
         </div>
     );
 }
 
 export default ItemListContainer;
+

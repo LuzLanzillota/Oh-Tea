@@ -105,6 +105,45 @@ h3 {
 .product-description p {
     margin-bottom: 1rem;
 }
-.font-bold{
+
+.font-bold {
     font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    .detail-container {
+        padding: 0 40px;
+        height: 85vh;
+        margin-top: 60px;
+    }
+
+    .product-detail {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .product-img {
+        width: 50%;
+    }
+
+    .product-info {
+        gap: 20px;
+    }
+
+    .product-title {
+        font-size: 32px;
+    }
+
+    .product-price {
+        font-size: 28px;
+    }
+
+    .product-description {
+        font-size: 18px;
+    }
+
+    .product-count button {
+        font-size: 15px;
+        padding: 12px 18px;
+    }
 }

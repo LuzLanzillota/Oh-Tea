@@ -19,7 +19,6 @@ function CartContainer() {
 
     return (
         <div className="cart-container">
-            <h1>Tu carrito</h1>
 
             {cartItems.length === 0 && !orderCompleted ? (
                 <p className="empty-cart">Tu carrito está vacío</p>
@@ -39,17 +38,17 @@ function CartContainer() {
 
             {cartItems.length > 0 && (
                 <>
-                    <div className="c-total">
-                        <div className="total">
-                            <p>Total: ${getTotalPrice()}</p>
+                    <div className="precioyboton">
+                        <div className="c-total">
+                            <div className="total">
+                                <p>Total: ${getTotalPrice()}</p>
+                            </div>
                         </div>
+
+                        <button className="checkout-btn" onClick={handleCheckout}>
+                        Comprar
+                        </button>
                     </div>
-
-                    <button className="clear-cart" onClick={clearCart}>Borrar carrito</button>
-
-                    <button className="checkout-btn" onClick={handleCheckout}>
-                        Realizar Compra
-                    </button>
                 </>
             )}
 

@@ -3,59 +3,55 @@ import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import cartContext from "../context/cartContext";
 import "./ItemDetail.css";
-import Footer from "./Footer";
 
 function ItemDetail(props) {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
-    const { price, title, img, id } = props;
+    const { price, title, description, img, stock, id, discount } = props;
+
     const { addItem } = useContext(cartContext);
 
     function onSubmitCount(count) {
-        addItem({ id, price, title, count, img });
+        if (discount > 0) {
+            const discountedPrice = price - (price * discount / 100);
+            addItem({ id, price: discountedPrice, title, count, img });
+        } else {
+            addItem({ id, price, title, count, img });
+        }
         setIsAddedToCart(true);
     }
 
     return (
-        <div>
-            <div className="detail-container">
-                <div className="detail">
-                    <div className="product-detail">
-                        <img src={props.img} alt="Imagen del producto" className="product-img" />
-                        <div className="product-info">
-                            <h3 className="product-title">{props.title}</h3>
+        <div className="detail-container">
+            <div className="detail">
+                <div className="product-detail">
+                    <img src={img} alt="product img" className="product-img" />
+                    <div className="product-info">
+                        <h3 className="product-title">{title}</h3>
+                        <p className="product-price">
+                            {discount > 0 ? (
+                                <>
+                                    <span className="old-price">$ {price}</span>
+                                    <span className="discounted-price">$ {price - (price * discount / 100)}</span>
+                                </>
+                            ) : (
+                                `$ ${price}`
+                            )}
+                        </p>
 
-                            <p className="product-price">$ {props.price}</p>
-
-                            <div className="product-description space-y-4 text-gray-800">
-                                <p>{props.description[0]}</p>
-
-                                <p className="font-bold">{props.description[1]}</p>
-
-                                <ul className="list-disc list-inside">
-                                    {props.description.slice(2, 5).map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-
-                                <p>{props.description[5]}</p>
-                            </div>
-
-
-                            <div className="product-count">
-                                {isAddedToCart ? (
-                                    <Link to="/cart">
-                                        <button className="btn-view-cart">Ver Carrito</button>
-                                    </Link>
-                                ) : (
-                                    <ItemCount onAdd={onSubmitCount} />
-                                )}
-                            </div>
+                        <p className="product-description">{description}</p>
+                        <div className="product-count">
+                            {isAddedToCart ? (
+                                <Link to="/cart">
+                                    <button>Ver Carrito</button>
+                                </Link>
+                            ) : (
+                                <ItemCount onSubmitCount={onSubmitCount} max={stock} />
+                            )}
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

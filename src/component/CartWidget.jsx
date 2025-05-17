@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import cartContext from "../context/cartContext";
-
+import './CartWidget.css';
 
 function CartWidget() {
     const { countItemsInCart } = useContext(cartContext);
@@ -10,11 +10,13 @@ function CartWidget() {
 
     return (
         <div className="cart">
-            <Link to="/cart">
+            <Link to="/cart" aria-label="Ir al carrito">
                 <img src="/images/carro-de-la-compra.png" alt="Imagen de carrito" style={{ cursor: "pointer", height: "30px" }} />
             </Link>
+            <div className="testo">
+                <span className="cart-text">{itemCount}</span>
+            </div>
 
-            <span className="cart-text">{itemCount}</span>
         </div>
     );
 }

@@ -9,7 +9,7 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    margin: auto;
 }
 
 .products button {
@@ -90,15 +90,21 @@ h2 {
 .modal-overlay h2 {
     color: #000000;
 }
+
 .modal img {
     margin-top: 50px;
     margin-bottom: -30px;
-    max-width: 60%;
+    max-width: 30%;
     border-radius: 5px;
 }
-.modal p{
+
+.modal p {
     margin-top: -30px;
     margin-bottom: 70px;
+}
+
+Footer {
+    margin-top: 15px;
 }
 
 @keyframes fadeIn {
@@ -110,5 +116,101 @@ h2 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para todas las pantallas de computadora */
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    .item {
+        margin-top: 50px;
+        width: 350px;
+
+    }
+
+    .modal {
+        padding: 40px 80px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    /* Estilos para todas las pantallas de computadora */
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    .item {
+        margin-top: 50px;
+        width: 300px;
+
+    }
+
+    .products {
+        margin-left: 50px;
+    }
+
+    .modal {
+        padding: 40px 80px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    .item {
+        margin-top: 50px;
+        width: 300px;
+
+    }
+
+    .products {
+        margin-left: 80px;
+    }
+
+    .modal {
+        padding: 40px 80px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    /* Estilos para todas las pantallas de computadora */
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    .item {
+        margin-top: 50px;
+        margin-left: 30px;
+        width: 370px;
+
+    }
+
+    .modal {
+        padding: 40px 80px;
+        max-width: 600px;
     }
 }

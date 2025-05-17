@@ -22,7 +22,7 @@ export function CartContextProvider(props) {
     }
 
     function clearCart() {
-        setCartItems([]); 
+        setCartItems([]);
     }
 
     return (
@@ -34,7 +34,7 @@ export function CartContextProvider(props) {
                 removeItem,
                 getTotalPrice,
                 clearCart,
-                setCartItems, 
+                setCartItems,
             }}
         >
             {props.children}

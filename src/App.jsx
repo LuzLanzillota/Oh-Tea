@@ -9,12 +9,14 @@ import { CartContextProvider } from "./context/cartContext";
 import ItemDetailContainer from './component/ItemDetailContainer'
 import ItemListContainer from './component/ItemListContainer';
 import CartContainer from "./component/CartContainer";
+import { exportProductsToDB } from './data/database';
 
 function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
         <NavBar />
+        {/* <button onClick={exportProductsToDB}>Render</button> */}
         <Routes>
           <Route path="/" element={<Innovacion />} />
           <Route path="/menu" element={<Menu />} />

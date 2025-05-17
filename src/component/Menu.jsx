@@ -1,8 +1,9 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";
 import Footer from "./Footer";
-
+import Loader from "./Loader";
+import { useState, useEffect } from "react";
+import Carrusel from "./Carrusel";
 const categories = [
     {
         title: "BUBBLE TEAM",
@@ -280,38 +281,53 @@ const Menu = () => {
         setModalOpen(false);
         setModalContent(null);
     };
+    const [showLoader, setShowLoader] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowLoader(false);
+        }, 1500);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showLoader) {
+        return <Loader />;
+    }
 
     return (
-        <div>
-            <div className="menu-container">
-                {categories.map((category, index) => (
-                    <div key={index} className="category">
-                        <h2>{category.title}</h2>
-                        <div className="products">
-                            {category.products.map((product) => (
-                                <div key={product.id} className="item" onClick={() => openModal(product)}>
-                                    <img src={product.image} alt={product.title} width="100" />
-                                    <p>{product.title}</p>
-                                    <button>Ver más</button>
-                                </div>
-                            ))}
+        <>
+            <div>
+                {/* <Carrusel /> */}
+                <div className="menu-container">
+                    {categories.map((category, index) => (
+                        <div key={index} className="category">
+                            <h2>{category.title}</h2>
+                            <div className="products">
+                                {category.products.map((product) => (
+                                    <div key={product.id} className="item" onClick={() => openModal(product)}>
+                                        <img src={product.image} alt={product.title} width="100" />
+                                        <p>{product.title}</p>
+                                        <button>Ver más</button>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
 
-                {modalOpen && (
-                    <div className="modal-overlay" onClick={closeModal}>
-                        <div className="modal" onClick={(e) => e.stopPropagation()}>
-                            <button className="close-btn" onClick={closeModal}>X</button>
-                            <img src={modalContent.image} alt={modalContent.title} className="modal-img" />
-                            <h2>{modalContent.title}</h2>
-                            <p>{modalContent.description}</p>
+                    {modalOpen && (
+                        <div className="modal-overlay" onClick={closeModal}>
+                            <div className="modal" onClick={(e) => e.stopPropagation()}>
+                                <button className="close-btn" onClick={closeModal}>X</button>
+                                <img src={modalContent.image} alt={modalContent.title} className="modal-img" />
+                                <h2>{modalContent.title}</h2>
+                                <p>{modalContent.description}</p>
+                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
-            <Footer />
-        </div>
+                    )}
+                </div>
+                <Footer />
+            </div></>
     );
 };
 

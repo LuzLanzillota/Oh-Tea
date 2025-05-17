@@ -1,6 +1,5 @@
 .cart-container {
-    max-width: 1250px;
-    margin: 20px auto;
+    max-width: 200vh;
     padding: 20px;
     text-align: center;
 }
@@ -24,12 +23,14 @@
     justify-content: space-between;
     gap: 40px;
     padding: 15px;
+    margin: 50px;
     border-bottom: 1px solid #ddd;
 }
 
 .cart-item img {
     width: 100px;
     height: auto;
+    border-radius: 8px;
 }
 
 
@@ -38,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 200px;
 }
 
 .cart-details h3,
@@ -50,7 +51,7 @@
 
 
 .cart-price {
-    font-weight: bold;
+
     color: #000000;
 }
 
@@ -92,7 +93,7 @@
 
 .cart-form input {
     width: 100%;
-    max-width: 350px; 
+    max-width: 350px;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -101,7 +102,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center; 
+    text-align: center;
 }
 
 
@@ -129,12 +130,12 @@
 }
 
 .c-total {
-    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .total {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: rgb(0, 0, 0);
     height: 30px;
@@ -143,6 +144,7 @@
     border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
+
 }
 
 .clear-cart {
@@ -156,4 +158,27 @@
 .realizada {
     margin-top: 20px;
     font-weight: bolder;
+}
+
+.precioyboton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 350px;
+}
+
+@media screen and (min-width: 1920px) {
+    .cart-container {
+        max-width: 200vh;
+        margin-left: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .precioyboton {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 350px;
+    }
 }

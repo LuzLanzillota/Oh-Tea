@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Contacto.css";
 import Button from "./Button";
 import Footer from "./Footer";
-
+import React, { useState, useEffect } from "react";
+import Loader from "./Loader";
 function Contacto() {
     const [formData, setFormData] = useState({
         nombre: "",
@@ -20,7 +20,22 @@ function Contacto() {
         console.log("Formulario enviado:", formData);
     };
 
+    const [showLoader, setShowLoader] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowLoader(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (showLoader) {
+        return <Loader />;
+    }
+
     return (
+        <>
         <div>
             <h1>Nuestras sucursales</h1>
             <div className="locales">
@@ -68,7 +83,7 @@ function Contacto() {
                 </div>
             </div>
             <Footer />
-        </div>
+        </div></>
     );
 }
 

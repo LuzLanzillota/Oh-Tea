@@ -23,6 +23,7 @@ header img {
     display: flex;
     align-items: center;
     margin-left: 700px;
+
 }
 
 /* Lista de navegación */
@@ -52,10 +53,100 @@ header img {
     text-decoration: underline;
 }
 
-/* Imagen derecha (usuario) */
-.right-img {
-    display: block;
-    max-width: 50px;
-    /* Ajuste de tamaño */
-    position: relative;
+@media screen and (min-width: 1024px) {
+    header img {
+        height: 100px;
+        margin-left: 40px;
+    }
+
+    .navbar {
+        margin-left: 200px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header img {
+        height: 100px;
+        margin-left: 40px;
+    }
+
+    .navbar {
+        margin-left: 350px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    header img {
+        height: 100px;
+        margin-left: 40px;
+    }
+
+    .navbar {
+        margin-left: 500rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header img {
+        height: 100px;
+        /* Logo un poco más grande */
+        margin-left: 40px;
+    }
+
+    .navbar {
+        margin-left: 36rem;
+        /* Desplaza la navbar más hacia la derecha */
+    }
+
+
+}
+
+@media screen and (min-width: 1920px) {
+    header img {
+        height: 6.25rem;
+        /* 100px si 1rem = 16px */
+        margin-left: 2.5rem;
+        /* 40px */
+    }
+
+    .navbar {
+        margin-left: 40rem;
+        /* 1030px */
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (min-width: 2000px) {
+    header img {
+        height: 100px;
+        /* Logo un poco más grande */
+        margin-left: 30px;
+    }
+
+    .navbar {
+        margin-left: 1130px;
+        /* Desplaza la navbar más hacia la derecha */
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+        /* Letras un poco más grandes para mejor visibilidad */
+    }
+
 }

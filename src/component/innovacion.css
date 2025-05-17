@@ -90,10 +90,68 @@
 
 .forma-parte img {
     margin-top: -3.7px;
+    margin-bottom: -19px;
 }
 
 .dejar-cv {
     position: absolute;
     top: 490%;
     left: 44%;
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1359px) {
+    .ver-sucursales {
+        top: 425%;
+    }
+
+    .dejar-cv {
+        top: 495%;
+    }
+
+    .btn-container {
+        top: 75%;
+    }
+}
+
+@media screen and (min-width: 1360px) and (max-width: 1439px) {
+    .ver-sucursales {
+        top: 505%;
+    }
+
+    .dejar-cv {
+        top: 580%;
+    }
+
+    .btn-container {
+        top: 90%;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .ver-sucursales {
+        top: 425%;
+    }
+
+    .dejar-cv {
+        top: 495%;
+    }
+
+    .btn-container {
+        top: 75%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .ver-sucursales {
+        top: 435%;
+    }
+
+    .dejar-cv {
+        top: 510%;
+    }
+
+    .btn-container {
+        top: 80%;
+    }
 }
