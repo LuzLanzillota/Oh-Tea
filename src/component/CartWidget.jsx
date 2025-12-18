@@ -13,9 +13,9 @@ function CartWidget() {
             <Link to="/cart" aria-label="Ir al carrito">
                 <img src="/images/carro-de-la-compra.png" alt="Imagen de carrito" style={{ cursor: "pointer", height: "30px" }} />
             </Link>
-            <div className="testo">
+          
                 <span className="cart-text">{itemCount}</span>
-            </div>
+            
 
         </div>
     );

@@ -22,13 +22,12 @@ function Innovacion() {
     return (
         <>
             <div className="innovacion">
+                <Link to="/sobreOhTea">
                 <img src="/images/Inovacion-en-te.png" alt="Imagen principal de inicio" />
+                
+            </Link>
 
-                <div className="btn-container">
-                    <Link to="/sobreOhTea">
-                        <Button>Conócenos</Button>
-                    </Link>
-                </div>
+             
 
                 <div className="bebidas">
                     <h1>Bebidas del día</h1>

@@ -1,21 +1,61 @@
-
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   text-align: center;
-  
 }
 
 .cart {
-margin-left: -10px;
+  margin-left: 0;
+  position: relative;
 }
 
 .cart-text {
-  position: absolute;
-  top: 5.5%;
-  left: 96%;
-  transform: translate(-50%, -50%);
-  font-size: 1.2rem;
+  top: 2%;
+  right: 4%;
+  bottom: 4%;
+  transform: translate(50%, -50%);
+  font-size: 0.85rem;
 
 }
+
+@media (min-width: 361px) and (max-width: 414px) {
+  .cart-text {
+    top: 5.8%;
+    right: 4.5%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1023px) {
+  .cart-text {
+    top: 5.5%;
+    right: 5%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .cart-text {
+    top: 5%;
+    right: 5.5%;
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .cart-text {
+    top: 4.8%;
+    right: 6%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .cart-text {
+    top: 4.5%;
+    right: 6.5%;
+    font-size: 1.2rem;
+  }
+}
+

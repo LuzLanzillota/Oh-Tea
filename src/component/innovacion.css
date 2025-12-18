@@ -1,157 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ---------- BASE / MOBILE (360px) ---------- */
+
 .innovacion {
-    width: 100vw;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .innovacion img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .innovacion h1 {
-    font-family: Poppins;
-    font-weight: bold;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .innovacion h2 {
-    font-family: Jost;
-    font-weight: 400;
-    font-size: 15px;
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Botón sobre imagen */
+.btn-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .bebidas img {
-    margin-top: 10px;
-    width: 85%;
-    height: auto;
+  margin-top: 10px;
+  width: 85%;
+  height: auto;
 }
 
-.btn-container {
-    position: absolute;
-    top: 70%;
-    left: 10.6%;
-}
+/* ---------- BLOQUES ---------- */
 
 .ver-mas-sabores {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin: 50px 0;
+  text-align: center;
 }
 
 .banner-te {
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 120px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 80px;
 }
 
 .fotitos img {
-    width: 70%;
-    height: auto;
+  width: 70%;
+  height: auto;
 }
 
 .fotitos p {
-    font-family: jost;
+  font-family: Jost;
+  font-size: 14px;
+  text-align: center;
 }
 
 .redes {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 .redes img {
-    width: 25px;
-    margin: 5px;
+  width: 24px;
+  margin: 5px;
+}
+
+/* ---------- SUCURSALES ---------- */
+
+.sucursales {
+  position: relative;
 }
 
 .sucursales img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.sucursales button {
-    background-color: #F8EEE3;
-    color: #0E463D;
-    font-family: Jost;
-    font-weight: 500;
-}
-
-.sucursales button:hover {
-    background-color: rgb(225, 209, 191);
+  width: 100%;
+  object-fit: cover;
 }
 
 .ver-sucursales {
-    position: absolute;
-    top: 423%;
-    left: 6.5%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sucursales button {
+  background-color: #F8EEE3;
+  color: #0E463D;
+  font-family: Jost;
+  font-weight: 500;
+}
+
+.sucursales button:hover {
+  background-color: rgb(225, 209, 191);
+}
+
+/* ---------- FORMA PARTE ---------- */
+
+.forma-parte {
+  position: relative;
 }
 
 .forma-parte img {
-    margin-top: -3.7px;
-    margin-bottom: -19px;
+  width: 100%;
+  height: auto;
 }
 
 .dejar-cv {
-    position: absolute;
-    top: 490%;
-    left: 44%;
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* ---------- 414px ---------- */
 
-@media screen and (min-width: 1200px) and (max-width: 1359px) {
-    .ver-sucursales {
-        top: 425%;
-    }
+@media (min-width: 361px) and (max-width: 414px) {
+  .innovacion h1 {
+    font-size: 1.7rem;
+  }
 
-    .dejar-cv {
-        top: 495%;
-    }
-
-    .btn-container {
-        top: 75%;
-    }
+  .innovacion h2 {
+    font-size: 1rem;
+  }
 }
 
-@media screen and (min-width: 1360px) and (max-width: 1439px) {
-    .ver-sucursales {
-        top: 505%;
-    }
+/* ---------- TABLET (415px – 1023px) ---------- */
 
-    .dejar-cv {
-        top: 580%;
-    }
+@media (min-width: 415px) and (max-width: 1023px) {
+  .innovacion h1 {
+    font-size: 2rem;
+  }
 
-    .btn-container {
-        top: 90%;
-    }
+  .btn-container {
+    bottom: 12%;
+  }
+
+  .ver-sucursales,
+  .dejar-cv {
+    bottom: 15%;
+  }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-    .ver-sucursales {
-        top: 425%;
-    }
+/* ---------- DESKTOP (1024px) ---------- */
 
-    .dejar-cv {
-        top: 495%;
-    }
+@media (min-width: 1024px) {
+  .innovacion h1 {
+    font-size: 2.4rem;
+  }
 
-    .btn-container {
-        top: 75%;
-    }
+  .innovacion h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn-container {
+    bottom: 18%;
+  }
+
+  .ver-sucursales {
+    bottom: 18%;
+    left: 8%;
+    transform: none;
+  }
+
+  .dejar-cv {
+    bottom: 20%;
+  }
 }
 
-@media screen and (min-width: 1920px) {
-    .ver-sucursales {
-        top: 435%;
-    }
+/* ---------- LARGE DESKTOP (1440px) ---------- */
 
-    .dejar-cv {
-        top: 510%;
-    }
+@media (min-width: 1440px) {
+  .innovacion h1 {
+    font-size: 2.8rem;
+  }
 
-    .btn-container {
-        top: 80%;
-    }
+  .btn-container {
+    bottom: 22%;
+  }
+
+  .ver-sucursales {
+    bottom: 20%;
+  }
+
+  .dejar-cv {
+    bottom: 22%;
+  }
+}
+
+/* ---------- ULTRA WIDE (1920px) ---------- */
+
+@media (min-width: 1920px) {
+  .innovacion h1 {
+    font-size: 3.2rem;
+  }
+
+  .btn-container {
+    bottom: 25%;
+  }
+
+  .ver-sucursales {
+    bottom: 22%;
+  }
+
+  .dejar-cv {
+    bottom: 25%;
+  }
 }
